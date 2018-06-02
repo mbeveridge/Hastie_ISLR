@@ -163,15 +163,18 @@ dim(A)
 ## 2.3.4 Loading Data
 
 ```{r}
-Auto=read.table("Auto.data")
-fix(Auto)
+Auto=read.table("./data/Auto.data")
+# fix(Auto)
+# "Error in edit.data.frame(get(subx, envir = parent), title = subx, ...) : X11 is not available"
 ```
 
 ```{r}
-Auto=read.table("Auto.data",header=T,na.strings="?")
-fix(Auto)
-Auto=read.csv("Auto.csv",header=T,na.strings="?")
-fix(Auto)
+Auto=read.table("./data/Auto.data",header=T,na.strings="?")
+# fix(Auto)
+# "Error in edit.data.frame(get(subx, envir = parent), title = subx, ...) : X11 is not available"
+Auto=read.csv("./data/Auto.csv",header=T,na.strings="?")
+# fix(Auto)
+# "Error in edit.data.frame(get(subx, envir = parent), title = subx, ...) : X11 is not available"
 dim(Auto)
 Auto[1:4,]
 ```
